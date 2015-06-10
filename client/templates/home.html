@@ -1,5 +1,15 @@
 <template name="Home">
 
-    <p>This is the home page.</p>
+    {{ #if posts }}
+        {{ #each posts }}
+        <div>
+            <h3>{{ title }}</h3>
+            <p>{{ content }}</p>
+            <h6>Posted on {{ createdAt }}</h6>
+        </div>
+        {{ /each }}
+    {{ else }}
+        <strong>No posts yet.</strong>
+    {{ /if }}
 
 </template>
