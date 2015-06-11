@@ -13,7 +13,7 @@ Router.map ->
             @next()
 
         data: () ->
-            posts = Posts.find().fetch()
+            posts = Posts.find({}, { sort: { createdAt: -1 } }).fetch()
             return data =
                 posts: posts
 
