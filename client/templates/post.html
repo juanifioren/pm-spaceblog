@@ -4,7 +4,7 @@
         <h3>{{ title }}</h3>
         <h6>Posted on {{ createdAt }}</h6>
         <p>{{ content }}</p>
-        <h6>This entry was posted in {{ category }}</h6>
+        <h6>This entry was posted in {{ showCategoryName category }}</h6>
     </div>
     <div><a href="{{ pathFor 'Home' }}">Go home</a></div>
 
