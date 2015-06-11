@@ -3,7 +3,7 @@
     {{ #if posts }}
         {{ #each posts }}
         <div>
-            <h3>{{ title }}</h3>
+            <h3><a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a></h3>
             <p>{{ content }}</p>
             <h6>Posted on {{ createdAt }}</h6>
         </div>
