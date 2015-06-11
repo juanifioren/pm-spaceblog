@@ -6,6 +6,11 @@ Router.plugin 'dataNotFound',
 
     notFoundTemplate: 'NotFound'
 
+initialSubscriptions = () ->
+    Meteor.subscribe('categories')
+
+Router.waitOn initialSubscriptions
+
 Router.map ->
 
     @route 'Home',

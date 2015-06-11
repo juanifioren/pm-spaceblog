@@ -5,3 +5,7 @@ Meteor.publish 'lastPosts', () ->
 Meteor.publish 'postBySlug', (slug) ->
 
     return Posts.find({ slug: slug })
+
+Meteor.publish 'categories', () ->
+
+	return Categories.find()
