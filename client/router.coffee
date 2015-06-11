@@ -2,6 +2,10 @@ Router.configure
 
     layoutTemplate: 'Layout'
 
+Router.plugin 'dataNotFound',
+
+    notFoundTemplate: 'NotFound'
+
 Router.map ->
 
     @route 'Home',
