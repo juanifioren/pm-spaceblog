@@ -8,3 +8,4 @@ meteor-platform
 coffeescript
 jquery
 iron:router
+momentjs:moment
