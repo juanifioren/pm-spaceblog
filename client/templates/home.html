@@ -4,7 +4,7 @@
         {{ #each posts }}
         <div>
             <h3><a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a></h3>
-            <h6>Posted on {{ createdAt }}</h6>
+            <h6>Posted {{ dateFromNow createdAt }} ago</h6>
             <p>{{ content }}</p>
             <h6>This entry was posted in {{ showCategoryName category }}</h6>
         </div>

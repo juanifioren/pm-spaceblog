@@ -2,7 +2,7 @@
 
     <div>
         <h3>{{ title }}</h3>
-        <h6>Posted on {{ createdAt }}</h6>
+        <h6>Posted on {{ dateFormat createdAt 'MMM Do YYYY, h:mm a' }}</h6>
         <p>{{ content }}</p>
         <h6>This entry was posted in {{ showCategoryName category }}</h6>
     </div>
