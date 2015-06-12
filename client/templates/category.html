@@ -1,0 +1,14 @@
+<template name="Category">
+
+	<h2>Category archives: {{ category.name }}</h2>
+    <div>
+        {{ #each posts }}
+        <div>
+            <h3><a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a></h3>
+            <h6>Posted {{ dateFromNow createdAt }} ago</h6>
+        </div>
+        {{ /each }}
+    </div>
+    <div><a href="{{ pathFor 'Home' }}">Go home</a></div>
+
+</template>
