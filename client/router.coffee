@@ -37,3 +37,23 @@ Router.map ->
 
         data: () ->
             return Posts.findOne({ slug: @params.slug })
+
+    @route 'Category',
+
+        path: '/category/:slug'
+
+        onBeforeAction: () ->
+            Meteor.call 'categoryPostsBySlug', @params.slug, (error, result) ->
+                Session.set('categoryPosts', result) if result
+            
+            @next()
+
+        data: () ->
+            category = Categories.findOne({ slug: @params.slug })
+            posts = Session.get('categoryPosts')
+            return data =
+                category: category
+                posts: posts
+
+        onStop: () ->
+            delete Session.keys['categoryPosts']
