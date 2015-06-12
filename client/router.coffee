@@ -23,8 +23,10 @@ Router.map ->
 
         data: () ->
             posts = Posts.find({}, { sort: { createdAt: -1 } }).fetch()
+            categories = Categories.find({}, { sort: { name: 1 } }).fetch()
             return data =
                 posts: posts
+                categories: categories
 
     @route 'Post',
 

@@ -13,4 +13,13 @@
         <strong>No posts yet.</strong>
     {{ /if }}
 
+    <hr>
+
+    <h2>Categories</h2>
+    {{ #each categories }}
+    <div>
+        <a href="#">{{ name }}</a>
+    </div>
+    {{ /each }}
+
 </template>
