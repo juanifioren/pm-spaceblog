@@ -8,4 +8,4 @@ Meteor.publish 'postBySlug', (slug) ->
 
 Meteor.publish 'categories', () ->
 
-	return Categories.find()
+    return Categories.find()
