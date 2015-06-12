@@ -18,7 +18,7 @@
     <h2>Categories</h2>
     {{ #each categories }}
     <div>
-        <a href="#">{{ name }}</a>
+        <a href="{{ pathFor 'Category' slug = slug }}">{{ name }}</a>
     </div>
     {{ /each }}
 
