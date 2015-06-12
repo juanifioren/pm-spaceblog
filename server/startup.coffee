@@ -3,8 +3,8 @@ Meteor.startup () ->
     if Posts.find().count() == 0
 
         console.log('Create some dummy categories.')
-        firstCategory = Categories.insert({ name: 'Greetings' })
-        secondCategory = Categories.insert({ name: 'Sports' })
+        firstCategory = Categories.insert({ name: 'Greetings', slug: 'greetings' })
+        secondCategory = Categories.insert({ name: 'Sports', slug: 'sports' })
 
         console.log('Create some dummy posts.')
         Posts.insert({ category: firstCategory, title: 'Hello World', slug: 'hello-world', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', createdAt: new Date('October 15, 2014 11:30:00') })
