@@ -1,14 +1,28 @@
 <template name="Category">
 
-	<h2>Category archives: {{ category.name }}</h2>
-    <div>
-        {{ #each posts }}
-        <div>
-            <h3><a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a></h3>
-            <h6>Posted {{ dateFromNow createdAt }} ago</h6>
+    <div class="ui stackable centered grid">
+        <div class="eleven wide column">
+            <div class="ui segment">
+                <div class="ui vertical segment">
+                    <h1 class="post-title">Category archives: <a class="ui huge tag label">{{ category.name }}</a></h1>
+                </div>
+                <div class="ui vertical segment">
+                    {{ #each posts }}
+                    <h3 class="ui header">
+                        <a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a>
+                      <div class="sub header">Posted {{ dateFromNow createdAt }} ago</div>
+                    </h3>
+                    {{ /each }}
+                </div>
+            </div>
         </div>
-        {{ /each }}
     </div>
-    <div><a href="{{ pathFor 'Home' }}">Go home</a></div>
+    
+    <div class="ui hidden divider"></div>
+
+    <a href="{{ pathFor 'Home' }}" class="ui left labeled icon button">
+        <i class="left arrow icon"></i>
+        Go Back Home
+    </a>
 
 </template>

@@ -1,11 +1,27 @@
 <template name="Post">
 
-    <div>
-        <h3>{{ title }}</h3>
-        <h6>Posted on {{ dateFormat createdAt 'MMM Do YYYY, h:mm a' }}</h6>
-        <p>{{ content }}</p>
-        <h6>This entry was posted in {{ showCategoryName category }}</h6>
+    <div class="ui stackable centered grid">
+        <div class="eleven wide column">
+            <div class="ui segment">
+                <div class="ui vertical segment">
+                    <h1 class="post-title">{{ title }}</h1>
+                    <h4 class="post-date">Posted on {{ dateFormat createdAt 'MMM Do YYYY, h:mm a' }}</h4>
+                </div>
+                <div class="ui vertical segment">
+                    <p class="post-content">{{ content }}</p>
+                </div>
+                <div class="ui vertical segment">
+                    <a class="ui huge tag label">{{ showCategoryName category }}</a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div><a href="{{ pathFor 'Home' }}">Go home</a></div>
+    
+    <div class="ui hidden divider"></div>
+
+    <a href="{{ pathFor 'Home' }}" class="ui left labeled icon button">
+        <i class="left arrow icon"></i>
+        Go Back Home
+    </a>
 
 </template>

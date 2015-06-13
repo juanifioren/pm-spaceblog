@@ -6,14 +6,20 @@
 
 <template name="Layout">
 
-    <h1>Welcome to Spaceblog</h1>
+    <div class="main-container">
 
-    <hr>
+        <div class="ui fixed menu">
+            <div class="menu-container">
+                <div class="header item">SpaceBlog</div>
+                <a href="{{ pathFor 'Home' }}" class="item"><i class="home icon"></i> Home</a>
+            </div>
+        </div>
 
-    {{ > yield }}
+        {{ > yield }}
 
-    <hr>
-
-    <i>Footer. Created with love, by me.</i>
+        <div class="ui hidden divider"></div>
+        <p class="footer-text"><i>Footer. Created with love, by me.</i></p>
+        
+    </div>
 
 </template>

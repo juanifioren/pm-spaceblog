@@ -1,6 +1,17 @@
 <template name="NotFound">
 
-    <h1>404</h1>
-    <p><i>It seems we can’t find what you’re looking for.</i> <a href="{{ pathFor 'Home' }}">Go home</a>.</p>
+    <div class="ui stackable centered grid">
+        <div class="eight wide column">
+            <div class="ui segment">
+                <h1 class="ui header">
+                    <i class="massive meh icon"></i>
+                    <div class="content">
+                        404
+                        <div class="sub header"><i>It seems we can’t find what you’re looking for.</i> <a href="{{ pathFor 'Home' }}">Go home</a>.</div>
+                    </div>
+                </h1>
+            </div>
+        </div>
+    </div>
 
 </template>

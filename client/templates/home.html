@@ -1,25 +1,31 @@
 <template name="Home">
 
-    {{ #if posts }}
-        {{ #each posts }}
-        <div>
-            <h3><a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a></h3>
-            <h6>Posted {{ dateFromNow createdAt }} ago</h6>
-            <p>{{ content }}</p>
-            <h6>This entry was posted in {{ showCategoryName category }}</h6>
+    <div class="ui stackable grid">
+        <div class="ten wide column">
+            {{ #if posts }}
+                {{ #each posts }}
+                <div class="ui segment">
+                    <h1 class="ui header">
+                        <a href="{{ pathFor 'Post' slug = slug }}">{{ title }}</a>
+                        <div class="sub header">Posted {{ dateFromNow createdAt }} ago. {{ showCategoryName category }}.</div>
+                    </h1>
+                    <p>{{ content }}</p>
+                    <div class="ui bottom right attached label"><a href="{{ pathFor 'Post' slug = slug }}">Read More</a></div>
+                </div>
+                {{ /each }}
+            {{ else }}
+                <strong>No posts yet.</strong>
+            {{ /if }}
         </div>
-        {{ /each }}
-    {{ else }}
-        <strong>No posts yet.</strong>
-    {{ /if }}
 
-    <hr>
-
-    <h2>Categories</h2>
-    {{ #each categories }}
-    <div>
-        <a href="{{ pathFor 'Category' slug = slug }}">{{ name }}</a>
+        <div class="six wide column">
+            <h2 class="ui top attached header">Categories</h2>
+            {{ #each categories }}
+            <div class="ui attached segment">
+                <a href="{{ pathFor 'Category' slug = slug }}">{{ name }}</a>
+            </div>
+            {{ /each }}
+        </div>
     </div>
-    {{ /each }}
 
 </template>

@@ -1,0 +1,47 @@
+.ui.menu {
+	margin-bottom: 40px;
+}
+
+.main-container {
+	margin: 0 auto;
+	max-width: 980px;
+  	padding-top: 47px;
+	width: 100%;
+}
+
+.menu-container {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.ui.menu .item {
+	font-size: 18px;
+}
+
+.ui.grid {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.footer-text {
+	color: #969696;
+	font-size: 17px;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.post-title {
+	font-size: 3rem;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+.post-date {
+	color: #969696;
+	margin: 0 5px;
+}
+
+.post-content {
+	color: #444444;
+	font-size: 1.5rem;
+}
