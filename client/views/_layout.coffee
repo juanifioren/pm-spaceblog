@@ -16,3 +16,6 @@ Template.Layout.events
                             Router.go('Home')
                     return false
             .modal('show')
+
+    'click #logout': (event) ->
+        Meteor.logout()
