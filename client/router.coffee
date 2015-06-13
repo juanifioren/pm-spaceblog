@@ -1,6 +1,7 @@
 Router.configure
 
     layoutTemplate: 'Layout'
+    notFoundTemplate: 'NotFound'
 
 Router.plugin 'dataNotFound',
 
