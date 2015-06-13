@@ -9,3 +9,4 @@ coffeescript
 jquery
 iron:router
 momentjs:moment
+semantic:ui-css
