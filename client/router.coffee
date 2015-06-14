@@ -58,3 +58,7 @@ Router.map ->
 
         onStop: () ->
             delete Session.keys['categoryPosts']
+
+    @route 'AdminCreatePost',
+
+        path: '/admin/post'

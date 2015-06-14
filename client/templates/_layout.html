@@ -14,7 +14,7 @@
                 <a href="{{ pathFor 'Home' }}" class="item"><i class="home icon"></i> Home</a>
                 <div class="right menu">
                     {{ #if currentUser }}
-                    <a class="item"><i class="pencil icon"></i> Create Post</a>
+                    <a href="{{ pathFor 'AdminCreatePost' }}" class="item"><i class="pencil icon"></i> Create Post</a>
                     <a id="logout" class="item"><i class="remove icon"></i> Logout</a>
                     {{ else }}
                     <a id="openLoginModal" class="item"><i class="user icon"></i> Login</a>
