@@ -43,8 +43,9 @@
                     <div class="field">
                         <label>Category</label>
                         <select class="ui search dropdown">
-                            <option value="AF">Greetings</option>
-                            <option value="AX">Sports</option>
+                            {{ #each categories }}
+                            <option value="{{ _id }}">{{ name }}</option>
+                            {{ /each }}
                         </select>
                     </div>
                 </div>

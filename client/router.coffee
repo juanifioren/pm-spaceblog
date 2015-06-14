@@ -74,3 +74,8 @@ Router.map ->
     @route 'AdminCreatePost',
 
         path: '/admin/post'
+
+        data: () ->
+            categories = Categories.find()
+            return data =
+                categories: categories
