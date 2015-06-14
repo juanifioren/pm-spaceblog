@@ -12,6 +12,18 @@ initialSubscriptions = () ->
 
 Router.waitOn initialSubscriptions
 
+userMustBeLogin = () ->
+    if not Meteor.user() and not Meteor.loggingIn()
+        @redirect('Home')
+    else
+        @next()
+
+# Add routes that need the user to be logged in.
+Router.onBeforeAction userMustBeLogin,
+    only: [
+        'AdminCreatePost'
+    ]
+
 Router.map ->
 
     @route 'Home',
