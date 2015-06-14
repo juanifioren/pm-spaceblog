@@ -42,7 +42,7 @@
                     </div>
                     <div class="field">
                         <label>Category</label>
-                        <select class="ui search dropdown">
+                        <select name="category" class="ui search dropdown">
                             {{ #each categories }}
                             <option value="{{ _id }}">{{ name }}</option>
                             {{ /each }}
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="ui hidden divider"></div>
-                <div class="ui right floated positive huge labeled icon button">
+                <div id="createPost" class="ui right floated positive huge labeled icon button">
                     <i class="checkmark icon"></i> Post It!
                 </div>
             </div>
